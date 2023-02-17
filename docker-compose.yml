@@ -1,0 +1,16 @@
+version: "3.9"
+services: 
+  app:
+    build: 
+      context: ./
+      dockerfile: dockerfile
+    image: api-pooling-image:v1
+    container_name: api-pooling-container
+    ports:
+      - "8001:80"
+    volumes:
+      - ./:/var/sites/api
+      - ./session/:/var/lib/php/session
+      - ./logs/:/var/sites/api/logs
+      - ./tmp/:/var/sites/api/tmp
+      - ./upload/:/var/sites/api/upload
