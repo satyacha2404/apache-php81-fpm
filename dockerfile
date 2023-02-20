@@ -1,4 +1,4 @@
-FROM satyachandra/apache-php81-fpm:v7
+FROM satyachandra/apache-php81-fpm:v8
 
 COPY config/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY config/php.ini /etc/php/8.1/fpm/php.ini
