@@ -9,4 +9,6 @@ COPY config/30-docker-php-ext-skywalking_agent.ini /etc/php/8.1/fpm/conf.d/30-do
 RUN chmod 777 -R /var/
 RUN chown www-data:www-data /var
 RUN a2enmod rewrite expires vhost_alias headers
+RUN chmod 777 -R /tmp/
+RUN chown www-data:www-data -R /tmp
 RUN a2ensite 000-default.conf
